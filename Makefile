@@ -8,10 +8,12 @@
 NAME = push_swap
 
 SRC =	main.c \
+		my_putchar.c \
+
 OBJ = $(SRC:.c=.o)
 
 $(NAME) : $(OBJ)
-	gcc -o $(NAME) $(OBJ) -lcsfml-window -lcsfml-system -lcsfml-graphics -lcsfml-audio -g3
+	gcc -o $(NAME) $(OBJ) -g3
 
 all : 	$(NAME)
 

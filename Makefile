@@ -7,8 +7,9 @@
 
 NAME = push_swap
 
-SRC =	main.c \
+SRC =	pushswap.c \
 		my_putchar.c \
+		my_putstr.c \
 
 OBJ = $(SRC:.c=.o)
 

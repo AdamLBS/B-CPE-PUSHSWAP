@@ -18,10 +18,9 @@
     }
 }*/
 
-int radix_binary(node_t *l_a, node_t *l_b, int neg)
+int radix_binary(node_t *l_a, node_t *l_b, int neg, int size)
 {
-    int switch_list = 0, mask = 0, count = 0;
-    int size = get_size(l_a);
+    int switch_list = 0, count = 0;
     for (int i = 0 ; i < 31; i++) {
         for (int tmp = size; tmp != 0; tmp--){
             if ((l_a->data >> i & 1)){
@@ -39,10 +38,10 @@ int radix_binary(node_t *l_a, node_t *l_b, int neg)
                     my_putstr("pa ");
                 }
     }
-    manage_neg(l_a, l_b, neg);
+    manage_neg(l_a, l_b, neg, size);
 }
 
-int manage_neg(node_t *l_a, node_t *l_b, int neg)
+int manage_neg(node_t *l_a, node_t *l_b, int neg, int size)
 {
     if (neg == 0)
     return 0;
@@ -77,7 +76,8 @@ int main(int ac, char **av)
         return 0;
     }
     int neg = check_neg(l_a);
-    radix_binary(l_a, l_b, neg);
+    int size = get_size(l_a);
+    radix_binary(l_a, l_b, neg, size);
     my_putstr("rb\n");
     return 0;
 }

@@ -10,6 +10,9 @@ NAME = push_swap
 SRC =	pushswap.c \
 		my_putchar.c \
 		my_putstr.c \
+		utils.c \
+		linked_list.c \
+		my_get_nbr.c \
 
 OBJ = $(SRC:.c=.o)
 

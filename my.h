@@ -4,24 +4,21 @@
 ** File description:
 ** my
 */
-
+#include "linked_list.h"
+#include <stdlib.h>
 #ifndef MY_H_
 #define MY_H_
-struct node
-{
-    int data;
-    struct node *next;
-};
-void move(struct node **dest, struct node **src);
-void append(struct node **head, int val);
-void printlist(struct node *head);
-int move_end(struct node **head_ref);
-int radix_binary(struct node *l_a, struct node *l_b, int neg);
-int manage_neg(struct node *l_a, struct node *l_b, int neg);
-int check_neg(struct node *l_a);
-int re_put_in_a(struct node *l_a, struct node *l_b, int switch_list);
-int is_sorted(struct node *l_a);
+void move(node_t **dest, node_t **src);
+void append(node_t **head, int val);
+void printlist(node_t *head);
+int move_end(node_t **head_ref);
+int radix_binary(node_t *l_a, node_t *l_b, int neg);
+int manage_neg(node_t *l_a, node_t *l_b, int neg);
+int check_neg(node_t *l_a);
+int re_put_in_a(node_t *l_a, node_t *l_b, int switch_list);
+int is_sorted(node_t *l_a);
 int my_putstr(char const *str);
-int get_size(struct node *l_a);
+int get_size(node_t *l_a);
 void my_putchar (char c);
+int my_get_nbr(char *str);
 #endif /* !MY_H_ */

@@ -15,7 +15,7 @@ void move(node_t **dest, node_t **src)
     *dest = new_node; 
 }
 
-void append(node_t **head, int val)
+void append(node_t **head, long int val)
 {
     node_t *new_node = malloc(sizeof(node_t));
     new_node->data = val;

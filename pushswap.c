@@ -54,7 +54,6 @@ int manage_neg(node_t *l_a, node_t *l_b, int neg, int size, node_t *tail)
             } else
             size--;
     }
-    printlist(l_a);
 } 
 
 int main(int ac, char **av)

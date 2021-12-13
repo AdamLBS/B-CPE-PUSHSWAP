@@ -21,7 +21,7 @@
 int radix_binary(node_t *l_a, node_t *l_b, int neg, int size, node_t *tail)
 {
     int switch_list = 0, count = 0;
-    for (int i = 0 ; i < 31; i++) {
+    for (int i = 0 ; i <= 31; i++) {
         for (int tmp = size; tmp != 0; tmp--){
             if ((l_a->data >> i & 1)){
                 move_end(&l_a, &tail);
@@ -45,16 +45,16 @@ int manage_neg(node_t *l_a, node_t *l_b, int neg, int size, node_t *tail)
 {
     if (neg == 0)
     return 0;
-    int list_size = get_size(l_a);
-    while (list_size != 0)
+    while (size != 0)
     {
             if ((l_a->data >> 31 == 0)){
                 move_end(&l_a, &tail);
                 my_putstr("ra ");
-                list_size--;
+                size--;
             } else
-            list_size--;
+            size--;
     }
+    printlist(l_a);
 } 
 
 int main(int ac, char **av)

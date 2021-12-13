@@ -25,7 +25,7 @@ void pb(node_t **dest, node_t **src, node_t **tail)
     *dest = new_node; 
 }
 
-void append(node_t **head, long int val, node_t **tail)
+void append(node_t **head, long val, node_t **tail)
 {
     node_t *new_node = malloc(sizeof(node_t));
     new_node->data = val;
@@ -46,8 +46,6 @@ void append(node_t **head, long int val, node_t **tail)
 int move_end(node_t **head_ref, node_t **tail)
 {
     if (*head_ref == NULL)
-        return 0;
-    if (get_size(*head_ref) < 2)
         return 0;
     node_t *first = *head_ref;
     node_t *last = *tail;

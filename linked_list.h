@@ -9,7 +9,7 @@
 #define LINKED_LIST_H_
 struct node
 {
-    long int data;
+    long data;
     struct node *next;
 } typedef node_t;
 #endif /* !LINKED_LIST_H_ */

@@ -5,9 +5,9 @@
 ** my_get_nbr
 */
 
-long int my_get_nbr(char *str)
+long my_get_nbr(char *str)
 {
-    long int i = 0, nb = 0, neg = 0;
+    long i = 0, nb = 0, neg = 0;
     while (str[i] != '\0' ) {
         if (str[i] == '-')
         {

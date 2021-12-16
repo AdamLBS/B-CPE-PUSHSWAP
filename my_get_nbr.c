@@ -15,12 +15,12 @@ long my_get_nbr(char *str)
             i++;
         }
         while (str[i] >= '0' && str[i] <= '9') {
-        nb = nb * 10;
-        nb = nb + str[i] - 48;
-        i = i + 1;
+            nb = nb * 10;
+            nb = nb + str[i] - 48;
+            i = i + 1;
         }
     }
     if (neg == 1)
-    nb = (nb * -1);
+        nb = (nb * -1);
     return nb;
-} 
+}

@@ -12,4 +12,4 @@ struct node
     long data;
     struct node *next;
 } typedef node_t;
-#endif /* !LINKED_LIST_H_ */
+#endif/* !LINKED_LIST_H_ */

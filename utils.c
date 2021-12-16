@@ -14,7 +14,7 @@ int is_sorted(node_t *l_a)
     while (size != 1)
     {
         if (temp->data > temp->next->data)
-        return 0;
+            return 0;
         temp = temp->next;
         size--;
     }
@@ -25,12 +25,11 @@ int check_neg(node_t *l_a)
 {
     int neg;
     node_t *temp = l_a;
-    while(temp != NULL)
+    while (temp != NULL)
     {
         if (temp->data < 0)
-        return 1;
-         temp = temp->next;
+            return 1;
+        temp = temp->next;
     }
     return 0;
 }
-

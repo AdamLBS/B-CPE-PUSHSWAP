@@ -1,0 +1,25 @@
+name: Pushswap test
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Test build
+      run: make
+    - name: Test unit
+      run: make tests_run
+    - name: Testing..
+      run: ./unit_tests
+    - name: Run..
+      run: ./push_swap 4 3
+    - name: Test fclean
+      run: make fclean

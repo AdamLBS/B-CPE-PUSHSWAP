@@ -8,7 +8,7 @@
 long my_get_nbr(char *str)
 {
     long i = 0, nb = 0, neg = 0;
-    while (str[i] != '\0' ) {
+    while (str[i] != '\0') {
         if (str[i] == '-')
         {
             neg = 1;

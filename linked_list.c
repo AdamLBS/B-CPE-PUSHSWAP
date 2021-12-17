@@ -7,7 +7,7 @@
 
 #include "my.h"
 
-void pa(node_t **dest, node_t **src, node_t **tail)
+void do_pa(node_t **dest, node_t **src, node_t **tail)
 {
     if (*src == NULL)
         return;
@@ -19,7 +19,7 @@ void pa(node_t **dest, node_t **src, node_t **tail)
         *tail = *dest;
 }
 
-void pb(node_t **dest, node_t **src, node_t **tail)
+void do_pb(node_t **dest, node_t **src, node_t **tail)
 {
     if (*src == NULL)
     return;
@@ -27,21 +27,6 @@ void pb(node_t **dest, node_t **src, node_t **tail)
     *src = (*src)->next;
     new_node->next = *dest;
     *dest = new_node;
-}
-
-void append(node_t **head, long val, node_t **tail)
-{
-    node_t *new_node = malloc(sizeof(node_t));
-    new_node->data = val;
-    new_node->next = NULL;
-    if (*head == NULL){
-        *head = new_node;
-        *tail = new_node;
-    } else {
-        node_t *last = *tail;
-        last->next = new_node;
-        *tail = last->next;
-    }
 }
 
 int move_end(node_t **head_ref, node_t **tail)
@@ -56,22 +41,4 @@ int move_end(node_t **head_ref, node_t **tail)
     first->next = NULL;
     last->next = first;
     *tail = last->next;
-}
-
-int get_size(node_t *l_a)
-{
-    node_t *temp = l_a;
-    int size;
-    for (size = 0; temp != NULL; size++)
-        temp = temp->next;
-    return size;
-}
-
-void printlist(struct node *head)
-{
-    struct node *temp = head;
-    for(;temp != NULL; temp = temp->next)
-    {
-         printf("%d ", temp->data);
-    }
 }

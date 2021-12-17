@@ -5,16 +5,16 @@
 ** structure
 */
 
-#ifndef STRUCTURE_H_
-#define STRUCTURE_H_
 #include "linked_list.h"
 
-struct val
-{
-    node_t *l_a;
-    node_t *l_b;
-    node_t *tail;
-    int count;
-}typedef values;
+#ifndef STRUCTURE_H_
+    #define STRUCTURE_H_
+
+    struct val {
+        node_t *l_a;
+        node_t *l_b;
+        node_t *tail;
+        int count;
+    } typedef values;
 
 #endif/* !STRUCTURE_H_ */

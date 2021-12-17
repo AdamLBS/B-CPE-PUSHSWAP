@@ -14,9 +14,12 @@ SRC =	pushswap.c \
 		linked_list.c \
 		my_get_nbr.c \
 		main.c \
+		append.c \
+		get_size.c \
 
 SRC_TESTS =	utils.c \
-		linked_list.c \
+		append.c \
+		get_size.c \
 		my_get_nbr.c\
 		tests/make_list.c \
 		tests/test_is_sorted.c \

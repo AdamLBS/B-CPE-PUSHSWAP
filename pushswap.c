@@ -15,7 +15,7 @@ int compute(values *my_val, int i)
         move_end(&my_val->l_a, &my_val->tail);
         write(1, "ra ", 3);
     } else {
-        pb(&my_val->l_b, &my_val->l_a, &my_val->tail);
+        do_pb(&my_val->l_b, &my_val->l_a, &my_val->tail);
         write(1, "pb ", 3);
         my_val->count++;
     }
@@ -30,7 +30,7 @@ int radix_binary(values my_val, int size)
         }
         for (; my_val.count != 0; my_val.count--)
         {
-            pb(&my_val.l_a, &my_val.l_b, &my_val.tail);
+            do_pa(&my_val.l_a, &my_val.l_b, &my_val.tail);
             write(1, "pa ", 3);
         }
     }

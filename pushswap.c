@@ -28,8 +28,7 @@ int radix_binary(values my_val, int size)
         for (int tmp = size; tmp != 0; tmp--) {
             compute(&my_val, i);
         }
-        for (; my_val.count != 0; my_val.count--)
-        {
+        for (; my_val.count != 0; my_val.count--) {
             do_pa(&my_val.l_a, &my_val.l_b, &my_val.tail);
             write(1, "pa ", 3);
         }
@@ -39,8 +38,7 @@ int radix_binary(values my_val, int size)
 
 int manage_neg(values my_val, int size)
 {
-    while (size != 0)
-    {
+    while (size != 0) {
         if ((my_val.l_a->data >> 31 == 0)) {
             move_end(&my_val.l_a, &my_val.tail);
             write(1,"ra ", 3);

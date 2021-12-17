@@ -22,7 +22,7 @@ void do_pa(node_t **dest, node_t **src, node_t **tail)
 void do_pb(node_t **dest, node_t **src, node_t **tail)
 {
     if (*src == NULL)
-    return;
+        return;
     node_t *new_node = *src;
     *src = (*src)->next;
     new_node->next = *dest;

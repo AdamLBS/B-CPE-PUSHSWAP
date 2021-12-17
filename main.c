@@ -15,8 +15,7 @@ int main(int ac, char **av)
     int i = 1;
     if (ac == 1)
         return 84;
-    while (av[i] != NULL)
-    {
+    while (av[i] != NULL) {
         append(&l_a, my_get_nbr(av[i]), &tail);
         i++;
     }

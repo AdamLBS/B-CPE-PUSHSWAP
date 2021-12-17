@@ -13,10 +13,10 @@ int compute(values *my_val, int i)
 {
     if ((my_val->l_a->data >> i & 1)) {
         move_end(&my_val->l_a, &my_val->tail);
-        my_putstr("ra ");
+        write(1, "ra ", 3);
     } else {
         pb(&my_val->l_b, &my_val->l_a, &my_val->tail);
-        my_putstr("pb ");
+        write(1, "pb ", 3);
         my_val->count++;
     }
 }
@@ -31,7 +31,7 @@ int radix_binary(values my_val, int size)
         for (; my_val.count != 0; my_val.count--)
         {
             pb(&my_val.l_a, &my_val.l_b, &my_val.tail);
-            my_putstr("pa ");
+            write(1, "pa ", 3);
         }
     }
     manage_neg(my_val, size);
@@ -43,7 +43,7 @@ int manage_neg(values my_val, int size)
     {
         if ((my_val.l_a->data >> 31 == 0)) {
             move_end(&my_val.l_a, &my_val.tail);
-            my_putstr("ra ");
+            write(1,"ra ", 3);
             size--;
         } else
             size--;

@@ -38,10 +38,7 @@ void append(node_t **head, long val, node_t **tail)
         *head = new_node;
         *tail = new_node;
     } else {
-        node_t *last = *head;
-        while (last->next != NULL) {
-            last = last->next;
-        }
+        node_t *last = *tail;
         last->next = new_node;
         *tail = last->next;
     }
@@ -68,4 +65,13 @@ int get_size(node_t *l_a)
     for (size = 0; temp != NULL; size++)
         temp = temp->next;
     return size;
+}
+
+void printlist(struct node *head)
+{
+    struct node *temp = head;
+    for(;temp != NULL; temp = temp->next)
+    {
+         printf("%d ", temp->data);
+    }
 }

@@ -28,6 +28,6 @@ int main(int ac, char **av)
     }
     int size = get_size(l_a);
     radix_binary(my_vals, size);
-    my_putstr("rb\n");
+    write(1, "rb\n", 3);
     return 0;
 }

@@ -2,7 +2,7 @@
 ** EPITECH PROJECT, 2021
 ** B-CPE-110-MAR-1-1-pushswap-adam.elaoumari
 ** File description:
-** append
+** append TEST JENKINS
 */
 
 #include "my.h"
